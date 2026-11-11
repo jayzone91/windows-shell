@@ -1,0 +1,51 @@
+
+format = """
+$directory$git_branch$git_status$fill$cmd_duration
+$character"""
+
+palette = "rose_pine"
+
+[palettes.rose_pine]
+text = "#e0def4"
+subtle = "#908caa"
+love = "#eb6f92"
+gold = "#f6c177"
+rose = "#ea9a97"
+pine = "#3e8fb0"
+foam = "#9ccfd8"
+iris = "#c4a7e7"
+
+[directory]
+format = "[ $path]($style) "
+style = "bold iris"
+truncation_length = 3
+truncate_to_repo = false
+
+[git_branch]
+symbol = " "
+format = "on [$symbol$branch]($style) "
+style = "bold foam"
+
+[git_status]
+format = "([$all_status$ahead_behind]($style) )"
+style = "gold"
+conflicted = "="
+ahead = "⇡"
+behind = "⇣"
+diverged = "⇕"
+untracked = "?"
+modified = "!"
+staged = "+"
+deleted = "✘"
+
+[fill]
+symbol = " "
+
+[cmd_duration]
+min_time = 1000
+format = "[ $duration]($style)"
+style = "subtle"
+
+[character]
+success_symbol = "[❯](bold rose)"
+error_symbol = "[❯](bold love)"
